@@ -4,6 +4,7 @@ import { BsPersonCheckFill } from "react-icons/bs";
 import { selectUser, selectIsLoggedIn } from "../../redux/auth/selectors";
 import { FormControlLabel, Switch } from "@mui/material";
 import { logout } from "../../redux/auth/operations";
+import CustomThemeSwitchBtn from "../sharedMui/CustomThemeSwitchBtn";
 
 const UserMenu = () => {
   const { name } = useSelector(selectUser);

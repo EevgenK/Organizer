@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 import { FormControlLabel, Switch } from "@mui/material";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme } from "../../redux/theme/slice";
+
+import { selectTheme } from "../../redux/theme/selectors";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -60,11 +62,17 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const CustomThemeSwitchBtn = () => {
+  const isDarkMode = useSelector(selectTheme);
   const dispatch = useDispatch();
   return (
     <FormControlLabel
-      onClick={() => dispatch(toggleTheme())}
-      control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
+      control={
+        <MaterialUISwitch
+          sx={{ m: 1 }}
+          checked={isDarkMode}
+          onChange={() => dispatch(toggleTheme())}
+        />
+      }
     />
   );
 };
