@@ -1,0 +1,49 @@
+.home {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.76;
+  background-color: var(--main--bgTr-color);
+  color: var(--second-text-color);
+  border: 1px solid var(--input-color);
+  border-radius: 8px;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+.title {
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 30px;
+  @media (min-width: 768px) {
+    font-size: 44px;
+  }
+}
+.introduce {
+  padding: 30px;
+  text-align: left;
+}
+.introduce > p {
+  text-align: justify;
+  text-indent: 20px;
+}
+
+.benefits {
+  font-size: 18px;
+  @media (min-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: var(--second-color);
+  transition: var(--animation-mode);
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

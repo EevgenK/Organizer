@@ -1,0 +1,32 @@
+.footer {
+  /* background-color: var(--main-color); */
+  border-top: 1px solid var(--second-text-color);
+  padding: 20px 0px;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.author {
+  /* color: var(--second-text-color); */
+  text-align: end;
+  font-size: 16px;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+}
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 2px;
+  padding: 4px 6px;
+  transition: var(--animation-mode);
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid var(--second-color);
+  }
+}

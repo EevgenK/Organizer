@@ -1,0 +1,30 @@
+.search {
+  width: 100%;
+
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background-color: var(--main-color);
+}
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+  & > p {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    font-size: 1.5em;
+    align-items: center;
+    @media (min-width: 768px) {
+      gap: 20px;
+    }
+  }
+}
+
+/* @media (min-width: 768px) {
+  .search {
+    width: 600px;
+  }
+} */

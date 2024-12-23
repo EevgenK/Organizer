@@ -1,0 +1,35 @@
+.navigation {
+  display: flex;
+  text-transform: uppercase;
+  gap: 10px;
+  align-items: flex-end;
+}
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 2px;
+  padding: 4px 6px;
+
+  transition: var(--animation-mode);
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid var(--second-color);
+  }
+}
+.link:global(.active) {
+  border-bottom: 1px solid var(--second-color);
+}
+.menu {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+.services {
+  display: none;
+  gap: 10px;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}

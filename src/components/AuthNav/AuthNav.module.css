@@ -1,0 +1,28 @@
+.navigation {
+  display: flex;
+  text-transform: uppercase;
+  gap: 10px;
+}
+.link {
+  font-size: 12px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  /* color: var(--second-text-color); */
+
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: border var(--animation-mode);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--second-text-color);
+  }
+  @media (min-width: 768px) {
+    font-size: 20px;
+  }
+}
+.link:global(.active) {
+  border: 1px solid var(--second-text-color);
+}

@@ -1,0 +1,31 @@
+.change {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+}
+.title {
+  text-align: center;
+  color: var(--second-text-color);
+  text-transform: uppercase;
+}
+.change > .button {
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  min-width: 230px;
+  max-width: 300px;
+  border-radius: 8px;
+  background-color: var(--input-color);
+  transition: var(--animation-mode);
+  color: var(--second-text-color);
+  &:hover {
+    background-color: var(--second-color);
+  }
+}
+@media (min-width: 768px) {
+  .form {
+    width: 600px;
+  }
+}

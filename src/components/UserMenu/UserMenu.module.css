@@ -1,0 +1,21 @@
+.user {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+.wrap {
+  display: flex;
+
+  justify-content: flex-end;
+  gap: 5px;
+}
+.greeting > span {
+  color: var(--second-color);
+}
+.icon {
+  color: var(--second-color);
+  display: none;
+  @media (min-width: 360px) {
+    display: inline;
+  }
+}
