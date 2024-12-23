@@ -1,12 +1,17 @@
 .invite {
-  color: var(--second-text-color);
   padding-bottom: 20px;
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
 }
 .link {
   text-decoration: none;
-  color: var(--second-color);
+  color: inherit;
   &:hover,
   &:focus {
     text-decoration: underline;
+  }
+  @media (min-width: 768px) {
+    font-size: 24px;
   }
 }

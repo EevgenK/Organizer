@@ -13,7 +13,7 @@ const FormWrap = ({ children, title, type }) => {
       component="div"
     >
       <Box className={s.wrap} component="div">
-        {type === "login" && <LoginIcon fontSize="large" color="secondary" />}
+        {type === "login" && <LoginIcon fontSize="large" color="primary" />}
         {(type === "register" || type === "create") && (
           <AppRegistrationIcon fontSize="large" color="primary" />
         )}
