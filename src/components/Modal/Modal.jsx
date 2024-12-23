@@ -6,14 +6,20 @@ import { useDispatch } from "react-redux";
 import { closeModal } from "../../redux/modal/slice";
 import CloseIcon from "@mui/icons-material/Close";
 import { Box } from "@mui/material";
+import { refreshCurrentItem } from "../../redux/contacts/slice";
 
 const modalRoot = document.querySelector("#modal-root");
 const Modal = ({ children }) => {
   const dispatch = useDispatch();
   const handleCloseModal = useCallback(
     ({ target, currentTarget, key }) => {
-      if (target === currentTarget || key === "Escape") {
+      if (
+        target === currentTarget ||
+        key === "Escape" ||
+        currentTarget.ariaLabel === "close"
+      ) {
         dispatch(closeModal());
+        dispatch(refreshCurrentItem());
       }
     },
     [dispatch]
@@ -36,7 +42,7 @@ const Modal = ({ children }) => {
         component="div"
       >
         <IconButton
-          onClick={() => dispatch(closeModal())}
+          onClick={handleCloseModal}
           size="small"
           aria-label="close"
           color="secondary"

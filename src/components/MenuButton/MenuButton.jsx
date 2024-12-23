@@ -7,7 +7,6 @@ const MenuButton = () => {
   const dispatch = useDispatch();
   const onHandleClick = () => {
     dispatch(openModal());
-    console.log("click");
   };
   return (
     <IconButton
