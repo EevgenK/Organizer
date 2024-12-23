@@ -2,7 +2,6 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../redux/theme/selectors";
 import CssBaseline from "@mui/material/CssBaseline";
-import { light } from "@mui/material/styles/createPalette";
 
 const darkTheme = createTheme({
   palette: {
