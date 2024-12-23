@@ -14,8 +14,9 @@ const AppBar = () => {
     <header className={s.header}>
       <nav className={clsx("container", s.navigation)}>
         <Navigation />
-        <CustomThemeSwitchBtn />
+
         {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        <CustomThemeSwitchBtn />
       </nav>
     </header>
   );

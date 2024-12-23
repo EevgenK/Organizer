@@ -4,7 +4,6 @@ import { BsPersonCheckFill } from "react-icons/bs";
 import { selectUser, selectIsLoggedIn } from "../../redux/auth/selectors";
 import { FormControlLabel, Switch } from "@mui/material";
 import { logout } from "../../redux/auth/operations";
-import CustomThemeSwitchBtn from "../sharedMui/CustomThemeSwitchBtn";
 
 const UserMenu = () => {
   const { name } = useSelector(selectUser);
@@ -18,7 +17,7 @@ const UserMenu = () => {
       <div className={s.wrap}>
         <BsPersonCheckFill className={s.icon} />
         <h5 className={s.greeting}>
-          Welcome, <span>{name}</span>
+          Welcome, <span> {name}</span>
         </h5>
       </div>
 
@@ -40,7 +39,6 @@ const UserMenu = () => {
         }
         label={isLoggedIn ? "Logout" : "Login"}
         sx={{
-          m: "0 0 0 auto",
           width: "fit-content",
           "&:hover .MuiFormControlLabel-label": { color: "dark.hover" },
           "& .MuiFormControlLabel-label": {

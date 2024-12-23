@@ -68,7 +68,6 @@ const CustomThemeSwitchBtn = () => {
     <FormControlLabel
       control={
         <MaterialUISwitch
-          sx={{ m: 1 }}
           checked={isDarkMode}
           onChange={() => dispatch(toggleTheme())}
         />

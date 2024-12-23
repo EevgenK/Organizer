@@ -21,7 +21,7 @@ const ContactsPage = () => {
 
   return (
     <CustomSection>
-      <div className="container">
+      <div className="container" style={{ padding: "0px" }}>
         <MainTitle text="phone book" />
         <div className={s.contacts}>
           <FormWrap type="create" title="Create contact">
